@@ -1,3 +1,4 @@
+import 'package:dna/master_provider.dart';
 import 'package:dna/modules/home/widgets/home_card.dart';
 import 'package:flutter/material.dart';
 
@@ -16,8 +17,8 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         title: ListTile(
           contentPadding: EdgeInsets.zero,
-          title: const Text(
-            'Maria Santos',
+          title: Text(
+            MasterProvider.instance.userName!,
             style: TextStyle(
               fontSize: 16,
               fontWeight: FontWeight.bold,
