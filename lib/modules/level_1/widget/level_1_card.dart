@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class Level1Card extends StatelessWidget {
-  const Level1Card({Key? key}) : super(key: key);
+  const Level1Card({Key? key, required this.onTap}) : super(key: key);
+
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +19,7 @@ class Level1Card extends StatelessWidget {
             Material(
               color: Colors.transparent,
               child: InkWell(
-                onTap: () {},
+                onTap: onTap,
               ),
             ),
           ],

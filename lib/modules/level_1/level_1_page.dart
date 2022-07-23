@@ -1,4 +1,5 @@
 import 'package:dna/core/widgets/custom_scrollbar.dart';
+import 'package:dna/modules/level_1/pages/level_1_introduction.dart';
 import 'package:dna/modules/level_1/widget/level_1_card.dart';
 import 'package:flutter/material.dart';
 
@@ -19,13 +20,17 @@ class _Level1PageState extends State<Level1Page> {
       body: CustomScrollbar(
         child: ListView(
           padding: const EdgeInsets.only(top: 24),
-          children: const [
-            Level1Card(),
-            Level1Card(),
-            Level1Card(),
-            Level1Card(),
-            Level1Card(),
-            Level1Card(),
+          children: [
+            Level1Card(onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (_) => const Level1Introduction()),
+              );
+            }),
+            Level1Card(onTap: () {}),
+            Level1Card(onTap: () {}),
+            Level1Card(onTap: () {}),
+            Level1Card(onTap: () {}),
+            Level1Card(onTap: () {}),
           ],
         ),
       ),
